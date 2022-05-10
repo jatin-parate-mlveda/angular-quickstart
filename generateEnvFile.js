@@ -5,8 +5,8 @@ const dotEnv = require("dotenv");
 const dotEnvResult = dotEnv.config().parsed;
 
 const env = {
+  EMAIL: process.env.EMAIL,
   ...dotEnvResult,
-  NAME: process.env.NAME,
 };
 
 fs.writeFileSync(
